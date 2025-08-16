@@ -14,6 +14,7 @@ Verified schema consistency (fields like title, listed_in, country, date_added, 
 
 2. Query Design & Transformation
 Designed MongoDB aggregation pipelines for each business task:
+
 Genres with more than 100 shows → Unwound listed_in field and grouped by genre.
 
 Top 5 countries by movie releases after 2015 → Filtered type = Movie, then grouped by country.
@@ -23,9 +24,10 @@ Monthly upload trend → Extracted year and month from date_added and counted up
 Most common rating per content type → Grouped by (type, rating) to find dominant ratings.
 
 Duplicate titles → Grouped by title and identified duplicates.
+
 3. Automation with PyMongo
 
-Wrapped each aggregation pipeline in Python scripts using PyMongo.
+Completed each aggregation pipeline in Python scripts using PyMongo.
 
 Converted MongoDB query results into pandas DataFrames.
 
